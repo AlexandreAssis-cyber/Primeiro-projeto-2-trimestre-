@@ -4,6 +4,103 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flashcards de Mitos e Verdades - Saúde Visual</title>
+    
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f7f6;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header {
+        background-color: #2c3e50;
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+      }
+
+      nav a {
+        color: #1abc9c;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      main {
+        max-width: 1000px;
+        width: 90%;
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      h2 {
+        color: #7f8c8d;
+        margin-bottom: 40px;
+      }
+
+      /* Estilo dos Flashcards */
+      section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+      }
+
+      article {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        width: 300px;
+        padding: 20px;
+        border: 2px solid #e0e0e0;
+        transition: transform 0.3s ease;
+      }
+
+      article:hover {
+        transform: translateY(-5px);
+        border-color: #1abc9c;
+      }
+
+      /* Padronização das Imagens Ilustrativas */
+      .cartao-imagem {
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      .cartao-verso {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px dashed #ddd;
+        background-color: #fafafa;
+        border-radius: 8px;
+      }
+
+      footer {
+        margin-top: auto;
+        background-color: #2c3e50;
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+      }
+    </style>
   </head>
   <body>
 
@@ -15,19 +112,19 @@
     </header> 
 
     <main> 
-      <h2>Descubra a verdade passando o mouse</h2> 
+      <h2>Descubra a verdade observando os cards abaixo</h2> 
       
       <section> 
         
         <article> 
           <div> 
             <div> 
-              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=500" alt="Olho humano olhando através de uma lente de óculos" class="cartao-imagem"> 
-              <p>Mito: Forçar a vista para ler no escuro aumenta a miopia permanentemente!</p> 
+              <img src="https://openclipart.org/image/400px/312014" alt="Ilustração vetorial simples de óculos de grau" class="cartao-imagem"> 
+              <p><strong>Mito:</strong> Forçar a vista para ler no escuro aumenta a miopia permanentemente!</p> 
             </div> 
             <div class="cartao-verso"> 
-              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=500" alt="Olho humano olhando através de uma lente de óculos" class="cartao-imagem"> 
-              <p>Verdade: Ler no escuro causa cansaço visual e dor de cabeça temporária, mas não altera a estrutura física do olho nem causa miopia.</p> 
+              <img src="https://openclipart.org/image/400px/217431" alt="Ilustração vetorial de uma lâmpada acesa brilhando" class="cartao-imagem"> 
+              <p><strong>Verdade:</strong> Ler no escuro causa apenas cansaço visual temporário. Não altera a estrutura do olho e não causa miopia.</p> 
             </div> 
           </div> 
         </article> 
@@ -35,12 +132,12 @@
         <article> 
           <div> 
             <div> 
-              <img src="https://images.unsplash.com/photo-1516387938699-a93567ec168e?w=500" alt="Pessoa idosa sorrindo usando óculos" class="cartao-imagem"> 
-              <p>Mito: A catarata só aparece em pessoas muito idosas!</p> 
+              <img src="https://openclipart.org/image/400px/278502" alt="Ilustração vetorial de um olho humano com uma lupa focando nele" class="cartao-imagem"> 
+              <p><strong>Mito:</strong> A catarata é uma doença exclusiva de pessoas muito idosas!</p> 
             </div> 
             <div class="cartao-verso"> 
-              <img src="https://images.unsplash.com/photo-1516387938699-a93567ec168e?w=500" alt="Pessoa idosa sorrindo usando óculos" class="cartao-imagem"> 
-              <p>Verdade: Embora seja mais comum na terceira idade, a catarata também pode ser congênita (nascer com ela) ou causada por traumas e diabetes.</p> 
+              <img src="https://openclipart.org/image/400px/281313" alt="Ilustração vetorial de um escudo de proteção médica" class="cartao-imagem"> 
+              <p><strong>Verdade:</strong> Embora seja comum em idosos, ela pode ser congênita (de nascença) ou desencadeada por diabetes e traumas.</p> 
             </div> 
           </div> 
         </article>
@@ -49,7 +146,7 @@
     </main> 
 
     <footer> 
-      <p>Projeto feito por Alexandre</p> 
+      <p>Projeto feito por Moni</p> 
     </footer> 
 
   </body> 
