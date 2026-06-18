@@ -9,14 +9,14 @@
   <body>
 
     <header class="cabecalho"> 
-      <h1>Confere Aí - Saúde Visual</h1> 
+      <h1>Confere Aí</h1> 
       <nav> 
         <a href="#">Início</a> 
       </nav> 
     </header> 
 
     <main> 
-      <h2>Passe o mouse sobre os cards para descobrir a verdade</h2> 
+      <h2>Descubra a verdade passando o mouse</h2> 
       
       <section class="container-cartoes"> 
         
@@ -30,7 +30,7 @@
             </div> 
             
             <div class="cartao-verso"> 
-              <img src="https://openclipart.org/image/400px/217431" alt="Ilustração de uma lâmpada acesa brilhando" class="cartao-imagem"> 
+              <img src="https://openclipart.org/image/400px/217431" alt="Ilustração de uma lâmpada acesa" class="cartao-imagem"> 
               <p class="tipo-info">VERDADE</p>
               <p class="texto-card">Ler no escuro causa apenas cansaço visual temporário. Não altera a estrutura física do olho.</p> 
             </div> 
@@ -42,13 +42,13 @@
           <div class="cartao-interno"> 
             
             <div class="cartao-frente"> 
-              <img src="https://openclipart.org/image/400px/278502" alt="Ilustração de um olho humano com uma lupa focando nele" class="cartao-imagem"> 
+              <img src="https://openclipart.org/image/400px/278502" alt="Ilustração de um olho com lupa" class="cartao-imagem"> 
               <p class="tipo-info">MITO</p>
               <p class="texto-card">A catarata é uma doença exclusiva de pessoas muito idosas!</p> 
             </div> 
             
             <div class="cartao-verso"> 
-              <img src="https://openclipart.org/image/400px/281313" alt="Ilustração vetorial de um escudo de proteção médica" class="cartao-imagem"> 
+              <img src="https://openclipart.org/image/400px/281313" alt="Ilustração de um escudo médico" class="cartao-imagem"> 
               <p class="tipo-info">VERDADE</p>
               <p class="texto-card">Embora seja comum em idosos, ela pode ser congênita ou desencadeada por diabetes e traumas.</p> 
             </div> 
@@ -60,168 +60,8 @@
     </main> 
 
     <footer> 
-      <p>Projeto de Acessibilidade - Feito por Alexandre</p> 
+      <p>Projeto feito por Alexandre</p> 
     </footer> 
 
   </body> 
 </html>
-
-
-/* --- RESET E CONFIGURAÇÕES BÁSICAS --- */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f4f8; /* Tom de fundo suave */
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-}
-
-/* --- ESTILO DO CABEÇALHO --- */
-.cabecalho {
-  background-color: #2c3e50; /* Azul escuro profissional */
-  color: white;
-  width: 100%;
-  text-align: center;
-  padding: 20px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.cabecalho h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-nav a {
-  color: #1abc9c; /* Verde água para contraste */
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-/* --- ÁREA PRINCIPAL E CONTAINER DOS CARDS --- */
-main {
-  width: 90%;
-  max-width: 1200px;
-  padding: 40px 20px;
-  text-align: center;
-  flex: 1; /* Faz o main ocupar o espaço entre header e footer */
-}
-
-h2 {
-  color: #7f8c8d;
-  font-weight: normal;
-  margin-bottom: 50px;
-}
-
-.container-cartoes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
-}
-
-/* --- LÓGICA E ESTILO DO FLIP CARD (EFEITO GIRAR) --- */
-
-/* 1. O contêiner principal define a perspectiva 3D */
-.cartao {
-  background-color: transparent;
-  width: 300px;
-  height: 350px;
-  perspective: 1000px; /* Essencial para o efeito 3D de profundidade */
-  cursor: pointer;
-}
-
-/* 2. A div interna que vai realmente girar */
-.cartao-interno {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s; /* Tempo da animação de girar */
-  transform-style: preserve-3d; /* Garante que os filhos (frente/verso) girem em 3D */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  border-radius: 15px;
-}
-
-/* A MÁGICA: Quando o mouse passa sobre .cartao, .cartao-interno gira */
-.cartao:hover .cartao-interno {
-  transform: rotateY(180deg);
-}
-
-/* 3. Estilo comum para as duas faces (Frente e Verso) */
-.cartao-frente, .cartao-verso {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Esconde a face de trás durante o giro */
-  backface-visibility: hidden;
-  border-radius: 15px;
-  border: 1px solid #e0e0e0;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; /* Centraliza o conteúdo verticalmente */
-}
-
-/* Estilo específico da Frente (O MITO) */
-.cartao-frente {
-  background-color: white;
-  color: #333;
-}
-
-/* Estilo específico do Verso (A VERDADE) */
-.cartao-verso {
-  background-color: #2c3e50; /* Azul escuro do cabeçalho */
-  color: white;
-  transform: rotateY(180deg); /* Começa já virado de costas */
-  border-color: #1abc9c;
-}
-
-/* --- ESTILO DO CONTEÚDO DENTRO DOS CARDS --- */
-.cartao-imagem {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  margin-bottom: 20px;
-}
-
-.tipo-info {
-  font-weight: bold;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
-}
-
-/* Cores diferentes para os títulos MITO e VERDADE */
-.cartao-frente .tipo-info {
-  color: #e74c3c; /* Vermelho para Mito */
-}
-
-.cartao-verso .tipo-info {
-  color: #1abc9c; /* Verde água para Verdade */
-}
-
-.texto-card {
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* --- ESTILO DO RODAPÉ --- */
-footer {
-  background-color: #2c3e50;
-  color: white;
-  width: 100%;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: auto; /* Garante que fique no final da página */
-}
